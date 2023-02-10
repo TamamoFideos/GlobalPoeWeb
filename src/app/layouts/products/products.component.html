@@ -1,0 +1,24 @@
+
+<div class="d-flex justify-content-center bg-secondary">
+    <h1>Catalogos</h1>
+</div>
+<div class="container">
+    <div class="row mt-5" style="width:100%">
+        <div class="col-3">
+            <div class="row mb-3  category-menu" *ngFor="let item of categories">
+                <h2 class="mb-3">{{item}}</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="col-7 ms-5">
+            <div class="row">
+                
+            </div>
+            <div class="col-sm-auto" *ngFor="let product of products">
+                <div >
+                    {{product.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

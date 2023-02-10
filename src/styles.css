@@ -1,6 +1,11 @@
 body {
-  background: #2c2c2c;
+  background: #151515;
   font-family: "Montserrat", sans-serif;
+  color: #eeebeb;
+}
+
+.bg-secondary {
+  background-color: #1c1c1c;
 }
 
 
@@ -94,6 +99,10 @@ body {
  .row-cols-5 > * {
    flex: 0 0 auto;
    width: 20%;
+ }
+
+ .p-static {
+  position: static !important;
  }
  
  .row-cols-6 > * {
