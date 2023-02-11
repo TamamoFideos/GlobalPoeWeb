@@ -6,7 +6,7 @@ import { ContainerComponent } from './container/container.component';
 import { LayoutRoutingModule } from './layouts-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ComponentsModule,
     LayoutRoutingModule,
-
+    MatIconModule,
     RouterModule
   ]
 })

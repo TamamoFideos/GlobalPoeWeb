@@ -9,6 +9,12 @@ body {
 }
 
 
+.base-container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
  .container,
  .container-fluid,
  .container-xxl,
@@ -5009,3 +5015,5 @@ body {
  }
  
  /*# sourceMappingURL=bootstrap-grid.css.map */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

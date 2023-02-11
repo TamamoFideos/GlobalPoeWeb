@@ -2,21 +2,41 @@
 <div class="d-flex justify-content-center bg-secondary">
     <h1>Catalogos</h1>
 </div>
-<div class="container">
+<div class="base-container">
     <div class="row mt-5" style="width:100%">
         <div class="col-3">
             <div class="row mb-3  category-menu" *ngFor="let item of categories">
-                <h2 class="mb-3">{{item}}</h2>
-                <hr>
+                <h2 class="mb-3" [ngClass]="{'selected' : item.name == selectedCatalog}" (click)="changeProducts(item)">{{item.name}}</h2>
+                <hr class="small">
             </div>
         </div>
-        <div class="col-7 ms-5">
+        <div class="col-8 ms-5">
             <div class="row">
-                
+                <hr class="small">
             </div>
-            <div class="col-sm-auto" *ngFor="let product of products">
-                <div >
-                    {{product.name}}
+            <div class="row" style="height: 100%;">
+                <div class="col-4 mb-4"  *ngFor="let prod of products">
+                    <div class="bg-secondary" style="height:300px" >
+                        <div class="product-image">
+                            <img src="{{'http://localhost/GlobalWebBack/images/'+prod.image}}" style="max-width: 300px;">
+                        </div>
+                        <div class="information d-flex justify-content-center align-items-center">
+                            <div class="interaction d-flex">
+                                <button class="round-btn">
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
+                                </button>
+                                <button class="round-btn ms-2">
+                                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>
+                        {{prod.name}}
+                    </h2>
+                    <h4>
+                        {{formatCurr(prod.price)}}
+                    </h4>
                 </div>
             </div>
         </div>

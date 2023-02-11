@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
-import { BaseService } from './base.service';
 import { HttpClient } from '@angular/common/http';
-import Product from '../model/product.model';
+import Category from '../model/category.model';
+import { BaseService } from './base.service';
 import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService extends BaseService<Product> {
-  protected override path = 'products'
+export class CategoriesService extends BaseService<Category>  {
+  protected override path = 'categories'
   constructor(override httpClient : HttpClient) {
     super(httpClient)
   }
   
- 
 }
