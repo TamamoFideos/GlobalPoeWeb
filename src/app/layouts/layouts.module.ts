@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { ComputerBuildComponent } from './computer-build/computer-build.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ContainerComponent,
     ComputerBuildComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,

@@ -23,4 +23,8 @@ export class AuthService {
       this.router.navigateByUrl('/')
     })
   }
+
+  createUser(formData : any){
+    return this.httpClient.post(this.baseUrl+"/post-user", formData);
+  }
 }

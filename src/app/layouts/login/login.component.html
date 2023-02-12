@@ -12,7 +12,7 @@
             <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
                 <div class="d-grid" [formGroup]="formData">
                     <div class="input-container">		
-                        <input formControlName="email" type="mail" required=""/>
+                        <input formControlName="email" type="email" required=""/>
                         <label>Email</label>
                     </div>
                     <div class="input-container">		
@@ -20,6 +20,7 @@
                         <label>Contraseña</label>
                     </div>
                     <button class="red" (click)="login()">Inicar Sesion</button>
+                    <button class="green" (click)="register()">Registrarse</button>
                 </div>
             </div>
         </div>

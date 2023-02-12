@@ -3193,6 +3193,61 @@ button.red:hover {
 }
 
 
+button.green {
+  position: relative;
+  border: 2px solid #54f77d;
+  color: #54f77d;
+}
+button.green.active,
+button.green:active,
+button.green:hover {
+  background: #54f77d;
+  color: #fff;
+}
+
+
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#cf1b1b;	
+    pointer-event:none;
+	transition: all 0.2s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #cf1b1b;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #cf1b1b;	
+}
+.input-container input:focus ~ label{
+  top:-12px;
+  font-size:12px;
+}
+
+.input-container input:valid ~ label{
+  top:-12px;
+  font-size:12px;
+}
+
+
+
+
+
+
  @media (min-width: 992px) {
    .d-lg-inline {
      display: inline !important;
