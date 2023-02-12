@@ -11,6 +11,7 @@ import { ComputerBuildComponent } from './computer-build/computer-build.componen
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { ProductsCreationComponent } from './products-creation/products-creation.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
     ComputerBuildComponent,
     LoginComponent,
     RegisterComponent,
+    ProductsCreationComponent,
   ],
   imports: [
     CommonModule,

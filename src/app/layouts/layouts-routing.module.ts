@@ -3,6 +3,8 @@ import { ProductsComponent } from './products/products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './container/container.component';
 import { ComputerBuildComponent } from './computer-build/computer-build.component';
+import { ProductsCreationComponent } from './products-creation/products-creation.component';
+import { AdminGuard } from '../guards/admin.guard';
 
 const routes: Routes = [
   
@@ -11,6 +13,10 @@ const routes: Routes = [
   children : [
     { path : 'products', component : ProductsComponent},
     { path : 'build', component : ComputerBuildComponent},
+    { 
+      canActivate : [AdminGuard],
+      path : 'product-manager', component : ProductsCreationComponent
+    },
   ]}
 ];
 

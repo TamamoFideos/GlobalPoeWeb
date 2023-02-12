@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,6 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+  @Input('menuType') menuType : string;
 
-  
+  constructor(
+    private authService : AuthService,
+    private router : Router
+  ) {
+    
+  }
+
+  closeSession(){
+    this.authService.user = undefined;
+    this.router.navigateByUrl('/login')
+  }
 }

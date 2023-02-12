@@ -6,10 +6,10 @@ import { LoginComponent } from './layouts/login/login.component';
 import { RegisterComponent } from './layouts/register/register.component';
 
 const routes: Routes = [
-  {path : '', redirectTo : '/', pathMatch : 'full'},
-  {path : '*', redirectTo : '/', pathMatch : 'full'},
+  {path : '', redirectTo : '/sites', pathMatch : 'full'},
   {path : 'login', component : LoginComponent},
-  {path : 'register', component : RegisterComponent}
+  {path : 'register', component : RegisterComponent},
+  {path : '*', redirectTo : '/', pathMatch : 'full'},
 ];
 
 @NgModule({
