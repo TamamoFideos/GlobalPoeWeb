@@ -8,7 +8,8 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService extends BaseService<Product> {
-  protected override path = 'products'
+  protected override path = 'products';
+  protected override singlePath = 'product';
   constructor(override httpClient : HttpClient) {
     super(httpClient)
   }

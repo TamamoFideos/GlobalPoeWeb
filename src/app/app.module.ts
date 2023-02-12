@@ -10,6 +10,7 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { Injectable } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './layouts/login/login.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @Injectable({providedIn: 'root'})
 @NgModule({

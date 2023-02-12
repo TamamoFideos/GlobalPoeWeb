@@ -1,30 +1,55 @@
-<section>
-    <!--for demo wrap-->
-    <h1>Productos</h1>
-    <div class="tbl-header">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Company</th>
-            <th>Price</th>
-            <th>Change</th>
-            <th>Change %</th>
-          </tr>
-        </thead>
-      </table>
+<section class="ms-4 mx-4">
+  <!--for demo wrap-->
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="d-inline-flex">
+      <h1>Productos</h1>
+      <label class="select ms-3" for="slct">
+        <select id="slct" required="required" (change)="reloadProducts($any($event.target).value)" aria-placeholder="Selecciona Categoria">
+          <option value="{{category.id}}" *ngFor="let category of categories" >{{category.name}}</option>
+        </select>
+        <svg>
+          <use xlink:href="#select-arrow-down"></use>
+        </svg>
+      </label>
+      
+      <!-- SVG Sprites-->
+      <svg class="sprites">
+        <symbol id="select-arrow-down" viewbox="0 0 10 6">
+          <polyline points="1 1 5 5 9 1"></polyline>
+        </symbol>
+      </svg>
     </div>
-    <div class="tbl-content">
-        <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-                <tr>
-                    <td>AAC</td>
-                    <td>AUSTRALIAN COMPANY </td>
-                    <td>$1.38</td>
-                    <td>+2.01</td>
-                    <td>-0.36%</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  </div>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Categoria</th>
+          <th>Imagen</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>Categoria</td>
+          <td><button class="f-button orange" >Imagen</button></td>
+          <td><button class="f-button green" (click)="editDialog(product)" >Editar</button></td>
+          <td><button class="f-button red" >Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
+
+

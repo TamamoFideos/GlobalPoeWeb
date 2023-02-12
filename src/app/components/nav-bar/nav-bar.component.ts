@@ -18,7 +18,6 @@ export class NavBarComponent {
   }
 
   closeSession(){
-    this.authService.user = undefined;
-    this.router.navigateByUrl('/login')
+    this.authService.logout()
   }
 }

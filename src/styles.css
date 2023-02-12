@@ -3167,7 +3167,7 @@ body {
    }
  }
 
- button {
+ .f-button {
   outline: 0;
   border: 0;
   background: none;
@@ -3180,28 +3180,42 @@ body {
   border-radius: 50px;
   transition: all 0.3s ease;
 }
-button.red {
+.f-button.red {
   position: relative;
   border: 2px solid #cf1b1b;
   color: #cf1b1b;
 }
-button.red.active,
-button.red:active,
-button.red:hover {
+.f-button.red.active,
+.f-button.red:active,
+.f-button.red:hover {
   background: #cf1b1b;
   color: #fff;
 }
 
 
-button.green {
+.f-button.green {
   position: relative;
   border: 2px solid #54f77d;
   color: #54f77d;
 }
-button.green.active,
-button.green:active,
-button.green:hover {
+.f-button.green.active,
+.f-button.green:active,
+.f-button.green:hover {
   background: #54f77d;
+  color: #fff;
+}
+
+
+
+.f-button.orange {
+  position: relative;
+  border: 2px solid orange;
+  color: orange;
+}
+.f-button.orange.active,
+.f-button.orange:active,
+.f-button.orange:hover {
+  background: orange;
   color: #fff;
 }
 
@@ -3244,7 +3258,71 @@ button.green:hover {
 }
 
 
+.input-container textarea{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#cf1b1b;	
+    pointer-event:none;
+	transition: all 0.2s ease-in-out;
+}
+.input-container textarea{ 
+  border:0;
+  border-bottom:1px solid #cf1b1b;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container textarea:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #cf1b1b;	
+}
+.input-container textarea:focus ~ label{
+  top:-12px;
+  font-size:12px;
+}
 
+.input-container textarea:valid ~ label{
+  top:-12px;
+  font-size:12px;
+}
+
+.input-container select{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#cf1b1b;	
+    pointer-event:none;
+	transition: all 0.2s ease-in-out;
+}
+.input-container select{ 
+  border:0;
+  border-bottom:1px solid #cf1b1b;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container select:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #cf1b1b;	
+}
+.input-container select:focus ~ label{
+  top:-12px;
+  font-size:12px;
+}
+
+.input-container select:valid ~ label{
+  top:-12px;
+  font-size:12px;
+}
 
 
 

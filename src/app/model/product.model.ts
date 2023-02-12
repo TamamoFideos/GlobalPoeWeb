@@ -6,5 +6,6 @@ export default interface Product{
     description : string,
     id : number,
     category : Category,
+    category_id : number,
     image : string,
 }

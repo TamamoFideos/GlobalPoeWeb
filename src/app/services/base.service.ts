@@ -9,6 +9,7 @@ import {map} from 'rxjs';
 export class BaseService<T> {
   protected baseUrl = 'http://localhost/GlobalWebBack'
   protected path = ''
+  protected singlePath = ''
   constructor(
     public httpClient : HttpClient
   ) { 
@@ -22,6 +23,21 @@ export class BaseService<T> {
       return data.list;
     }))
   }
+
+  public post(args = '', data : any){
+    return this.httpClient.post<{list : T[]}>(this.baseUrl+'/'+this.path+'/post-'+this.singlePath+((args !== '') ? '?' + args : args), data)
+    .pipe(map((data ) => {
+      return data;
+    }))
+  }
+
+  public put(args = '', data : any){
+    return this.httpClient.post<{list : T[]}>(this.baseUrl+'/'+this.path+'/put-'+this.singlePath+((args !== '') ? '?' + args : args), data)
+    .pipe(map((data ) => {
+      return data;
+    }))
+  }
+
 
   
 }

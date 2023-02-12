@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ProductsCreationComponent } from './products-creation/products-creation.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProductsCreationComponent } from './products-creation/products-creation
     MatIconModule,
     RouterModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ]
 })
 export class LayoutsModule { }
