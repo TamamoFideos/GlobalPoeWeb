@@ -6,6 +6,7 @@ import Product from 'src/app/model/product.model';
 import { ProductsService } from 'src/app/services/products.service';
 import { Router } from '@angular/router';
 import { ImageDialogComponent } from '../image-dialog/image-dialog.component';
+import { UploadService } from '../../services/upload.service';
 
 @Component({
   selector: 'app-product-edit-dialog',
@@ -18,10 +19,12 @@ export class ProductEditDialogComponent {
   product : Product;
   id : string;
   hasFile : boolean = false;
+  eventFile : any;
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: {product : Product, categories : Category[]},
     private formBuilder : FormBuilder,
     private productService : ProductsService,
+    private uploadService : UploadService,
     private router : Router,
     private dialog : MatDialog
   ){
@@ -42,8 +45,18 @@ export class ProductEditDialogComponent {
 
   updateProduct(){
     this.productService.put('id='+this.id, this.formData.value).subscribe(data => {
-      window.location.reload()
+      if(this.eventFile){
+        this.uploadService.uploadFile(this.eventFile, 'products', 'image', this.id).subscribe(data => {
+          window.location.reload()
+        })
+      }else{
+        window.location.reload()
+      }
     })
+  }
+
+  uploadFile(event : any){
+    
   }
 
   openFileDialog(){
@@ -52,5 +65,9 @@ export class ProductEditDialogComponent {
       height : '80%',
       width : '70%'
     });
+  }
+
+  loadFile(event : any){
+    this.eventFile =event;
   }
 }

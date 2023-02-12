@@ -112,3 +112,7 @@ h1{
     pointer-events: none;
     user-select: none;
   }
+
+  .file-input{
+    display: none;
+  }

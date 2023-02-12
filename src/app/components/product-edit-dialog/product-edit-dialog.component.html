@@ -26,7 +26,8 @@
                 </textarea>
                 <label>Descripcion</label>
             </div>
-            <button class="f-button red mt-5">Subir Imagen</button>
+            <input type="file" class="file-input" (change)="loadFile($event)" #fileUpload>
+            <button class="f-button red mt-5" (click)="fileUpload.click()">Subir Imagen</button>
             <button class="f-button orange mt-5" (click)="openFileDialog()" [hidden]="!hasFile">Abrir Imagen</button>
 
         </div>
