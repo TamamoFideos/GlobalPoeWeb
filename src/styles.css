@@ -3220,6 +3220,18 @@ body {
 }
 
 
+.f-button.blue {
+  position: relative;
+  border: 2px solid rgb(97, 75, 223);
+  color: rgb(97, 75, 223);
+}
+.f-button.blue.active,
+.f-button.blue:active,
+.f-button.blue:hover {
+  background: rgb(97, 75, 223);
+  color: #fff;
+}
+
 .input-container{
 	position:relative;
 	margin-bottom:25px;

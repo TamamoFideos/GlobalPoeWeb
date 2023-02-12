@@ -24,8 +24,8 @@ export class BaseService<T> {
     }))
   }
 
-  public post(args = '', data : any){
-    return this.httpClient.post<{list : T[]}>(this.baseUrl+'/'+this.path+'/post-'+this.singlePath+((args !== '') ? '?' + args : args), data)
+  public post(data : any){
+    return this.httpClient.post<T>(this.baseUrl+'/'+this.path+'/post-'+this.singlePath, data)
     .pipe(map((data ) => {
       return data;
     }))

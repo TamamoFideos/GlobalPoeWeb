@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import { SafePipe } from '../pipes/safe.pipe';
+import { ProductCreateDialogComponent } from './product-create-dialog/product-create-dialog.component';
 
 
 
@@ -16,6 +17,7 @@ import { SafePipe } from '../pipes/safe.pipe';
     ProductEditDialogComponent,
     ImageDialogComponent,
     SafePipe,
+    ProductCreateDialogComponent,
   ],
   imports: [
     CommonModule,

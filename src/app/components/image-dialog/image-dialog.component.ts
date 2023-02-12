@@ -11,9 +11,14 @@ export class ImageDialogComponent {
   baseUrl = 'http://localhost/GlobalWebBack/images/'
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: {url : string},
+    @Inject(MAT_DIALOG_DATA) public data: {url : string, localFile : File},
   ){
     this.documentPath = this.baseUrl+ data.url;
+    if(!this.data.localFile){
+      this.documentPath = this.baseUrl+ data.url;
+    }else{
+      this.documentPath = URL.createObjectURL(this.data.localFile)
+    }
   }
 
 }

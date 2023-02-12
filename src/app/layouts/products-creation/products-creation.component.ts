@@ -6,6 +6,7 @@ import Product from 'src/app/model/product.model';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { ProductsService } from 'src/app/services/products.service';
 import { ProductEditDialogComponent } from '../../components/product-edit-dialog/product-edit-dialog.component';
+import { ProductCreateDialogComponent } from '../../components/product-create-dialog/product-create-dialog.component';
 
 @Component({
   selector: 'app-products-creation',
@@ -41,6 +42,14 @@ export class ProductsCreationComponent implements OnInit {
   editDialog(product : Product){
     const dialogRef = this.dialog.open(ProductEditDialogComponent, {
       data: {product, categories : this.categories},
+      height : '80%',
+      width : '70%'
+    });
+  }
+
+  createDialog(){
+    const dialogRef = this.dialog.open(ProductCreateDialogComponent, {
+      data: {categories : this.categories},
       height : '80%',
       width : '70%'
     });
