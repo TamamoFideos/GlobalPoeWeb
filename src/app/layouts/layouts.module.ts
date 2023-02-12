@@ -7,19 +7,25 @@ import { LayoutRoutingModule } from './layouts-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
-
+import { ComputerBuildComponent } from './computer-build/computer-build.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     ProductsComponent,
-    ContainerComponent
+    ContainerComponent,
+    ComputerBuildComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     ComponentsModule,
     LayoutRoutingModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class LayoutsModule { }

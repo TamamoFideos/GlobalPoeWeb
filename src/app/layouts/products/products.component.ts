@@ -1,11 +1,11 @@
 import { formatCurrency } from '@angular/common';
 import { Component, LOCALE_ID } from '@angular/core';
-import Category from 'src/app/model/category.model';
 import { ProductsService } from 'src/app/services/products.service';
-import Product from '../../model/product.model';
 import { CategoriesService } from '../../services/categories.service';
 import localeEs from '@angular/common/locales/es-MX';
 import { registerLocaleData } from '@angular/common';
+import Product from 'src/app/model/product.model';
+import Category from 'src/app/model/category.model';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

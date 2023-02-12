@@ -8,6 +8,9 @@ body {
   background-color: #1c1c1c;
 }
 
+.bg-primary {
+  background-color: #d14038;
+}
 
 .base-container {
   padding-left: 5%;
@@ -3163,6 +3166,33 @@ body {
      padding-left: 3rem !important;
    }
  }
+
+ button {
+  outline: 0;
+  border: 0;
+  background: none;
+  margin: 25px;
+  padding: 10px 35px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+button.red {
+  position: relative;
+  border: 2px solid #cf1b1b;
+  color: #cf1b1b;
+}
+button.red.active,
+button.red:active,
+button.red:hover {
+  background: #cf1b1b;
+  color: #fff;
+}
+
+
  @media (min-width: 992px) {
    .d-lg-inline {
      display: inline !important;

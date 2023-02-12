@@ -9,11 +9,12 @@ import { RouterModule } from '@angular/router';
 import { LayoutsModule } from './layouts/layouts.module';
 import { Injectable } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './layouts/login/login.component';
 
 @Injectable({providedIn: 'root'})
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
