@@ -9,6 +9,8 @@ import { of } from 'rxjs';
 })
 export class CategoriesService extends BaseService<Category>  {
   protected override path = 'categories'
+  protected override singlePath = 'category';
+
   constructor(override httpClient : HttpClient) {
     super(httpClient)
   }

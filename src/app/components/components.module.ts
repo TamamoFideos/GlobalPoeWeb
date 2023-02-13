@@ -8,6 +8,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import { SafePipe } from '../pipes/safe.pipe';
 import { ProductCreateDialogComponent } from './product-create-dialog/product-create-dialog.component';
+import { CategoryCreateDialogComponent } from './category-create-dialog/category-create-dialog.component';
+import { CategoryEditDialogComponent } from './category-edit-dialog/category-edit-dialog.component';
 
 
 
@@ -18,6 +20,8 @@ import { ProductCreateDialogComponent } from './product-create-dialog/product-cr
     ImageDialogComponent,
     SafePipe,
     ProductCreateDialogComponent,
+    CategoryCreateDialogComponent,
+    CategoryEditDialogComponent,
   ],
   imports: [
     CommonModule,

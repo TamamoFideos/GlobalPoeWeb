@@ -13,6 +13,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ProductsCreationComponent } from './products-creation/products-creation.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CategoryCreationComponent } from './category-creation/category-creation.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     LoginComponent,
     RegisterComponent,
     ProductsCreationComponent,
+    CategoryCreationComponent,
   ],
   imports: [
     CommonModule,

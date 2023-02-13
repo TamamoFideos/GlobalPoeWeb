@@ -5,6 +5,7 @@ import { ContainerComponent } from './container/container.component';
 import { ComputerBuildComponent } from './computer-build/computer-build.component';
 import { ProductsCreationComponent } from './products-creation/products-creation.component';
 import { AdminGuard } from '../guards/admin.guard';
+import { CategoryCreationComponent } from './category-creation/category-creation.component';
 
 const routes: Routes = [
   
@@ -16,6 +17,10 @@ const routes: Routes = [
     { 
       canActivate : [AdminGuard],
       path : 'product-manager', component : ProductsCreationComponent
+    },
+    { 
+      canActivate : [AdminGuard],
+      path : 'category-manager', component : CategoryCreationComponent
     },
   ]}
 ];
