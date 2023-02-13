@@ -1,0 +1,12 @@
+
+
+.first-row{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('https://cdn.shopify.com/s/files/1/0682/8041/8586/files/slider-bg.png?v=1669618816&width=4100');
+}
+
+h1{
+    font-size: 2rem;
+}

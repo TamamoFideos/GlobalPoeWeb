@@ -20,4 +20,8 @@ export class NavBarComponent {
   closeSession(){
     this.authService.logout()
   }
+
+  openCar(){
+    
+  }
 }

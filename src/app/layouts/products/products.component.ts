@@ -15,6 +15,7 @@ export class ProductsComponent{
   public products : Product[]
   public categories : Category[]
   public selectedCatalog : string;
+  public cartOpened : boolean = false;
   constructor(
     private productService : ProductsService,
     private categoryService : CategoriesService){

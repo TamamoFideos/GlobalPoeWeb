@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UploadService {
 
-  protected baseUrl = 'http://localhost/GlobalWebBack'
+  protected baseUrl = 'http://localhost/Server'
 
   constructor(private http: HttpClient) {}
 

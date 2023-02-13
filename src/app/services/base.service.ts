@@ -7,7 +7,7 @@ import {map} from 'rxjs';
   providedIn: 'root'
 })
 export class BaseService<T> {
-  protected baseUrl = 'http://localhost/GlobalWebBack'
+  protected baseUrl = 'http://localhost/Server'
   protected path = ''
   protected singlePath = ''
   constructor(

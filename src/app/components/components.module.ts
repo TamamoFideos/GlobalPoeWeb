@@ -10,6 +10,8 @@ import { SafePipe } from '../pipes/safe.pipe';
 import { ProductCreateDialogComponent } from './product-create-dialog/product-create-dialog.component';
 import { CategoryCreateDialogComponent } from './category-create-dialog/category-create-dialog.component';
 import { CategoryEditDialogComponent } from './category-edit-dialog/category-edit-dialog.component';
+import { CartComponent } from './cart/cart.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -22,16 +24,19 @@ import { CategoryEditDialogComponent } from './category-edit-dialog/category-edi
     ProductCreateDialogComponent,
     CategoryCreateDialogComponent,
     CategoryEditDialogComponent,
+    CartComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatIconModule
   ],
   exports : [
-    NavBarComponent
+    NavBarComponent,
+    CartComponent
   ]
 })
 export class ComponentsModule { }

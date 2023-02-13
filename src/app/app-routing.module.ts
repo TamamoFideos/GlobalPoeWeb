@@ -4,12 +4,14 @@ import { ContainerComponent } from './layouts/container/container.component';
 import { LayoutRoutingModule } from './layouts/layouts-routing.module';
 import { LoginComponent } from './layouts/login/login.component';
 import { RegisterComponent } from './layouts/register/register.component';
+import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path : '', redirectTo : '/sites', pathMatch : 'full'},
+  {path : '', redirectTo : '/dashboard', pathMatch : 'full'},
   {path : 'login', component : LoginComponent},
+  {path : 'dashboard', component : DashboardComponent},
   {path : 'register', component : RegisterComponent},
-  {path : '*', redirectTo : '/', pathMatch : 'full'},
+  {path : '*', redirectTo : '/dashboard', pathMatch : 'full'},
 ];
 
 @NgModule({

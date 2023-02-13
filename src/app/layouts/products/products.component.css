@@ -35,11 +35,6 @@
     -webkit-transition: all 0.2s ease-in-out;
     border: 1px solid #dd2319;
 }
-
-.selected{
-    color: #dd2319;
-}
-
 .round-btn:hover{
     color: #dd2319;
     background-color: white;
@@ -47,6 +42,11 @@
     border: 1px solid white;
 
 }
+
+.selected{
+    color: #dd2319;
+}
+
 
 
 .information{

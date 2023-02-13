@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  protected baseUrl = 'http://localhost/GlobalWebBack/auth'
+  protected baseUrl = 'http://localhost/Server/auth'
   public user : User | undefined;
   constructor(
     private httpClient : HttpClient,
