@@ -39,6 +39,12 @@ export class ProductsCreationComponent implements OnInit {
     })
   }
 
+  deleteProduct(id : number){
+    this.productsService.delete(`id=${id}`).subscribe(data=> {
+      window.location.reload()
+    })
+  }
+
   editDialog(product : Product){
     const dialogRef = this.dialog.open(ProductEditDialogComponent, {
       data: {product, categories : this.categories},

@@ -45,7 +45,7 @@
           <td>Categoria</td>
           <td><button class="f-button orange" >Imagen</button></td>
           <td><button class="f-button green" (click)="editDialog(product)" >Editar</button></td>
-          <td><button class="f-button red" >Eliminar</button></td>
+          <td><button class="f-button red"  (click)="deleteProduct(product.id)">Eliminar</button></td>
         </tr>
       </tbody>
     </table>

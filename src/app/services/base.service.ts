@@ -38,6 +38,13 @@ export class BaseService<T> {
     }))
   }
 
+  public delete(args = ''){
+    return this.httpClient.delete<{list : T[]}>(this.baseUrl+'/'+this.path+'/delete-'+this.singlePath+((args !== '') ? '?' + args : args))
+    .pipe(map((data ) => {
+      return data;
+    }))
+  }
+
 
   
 }
