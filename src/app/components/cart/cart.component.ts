@@ -5,6 +5,8 @@ import ProductOrder from '../../model/product-order.model';
 import { CartService } from '../../services/cart.service';
 import { formatCurrency, registerLocaleData } from '@angular/common';
 import Order from '../../model/order.model copy';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +17,9 @@ export class CartComponent {
   public orders :ProductOrder[]
 
   constructor(
-    private cartService : CartService
+    private cartService : CartService,
+    private authService : AuthService,
+    private router : Router
   ){
     this.cartService.retrieve()
     this.orders = cartService.orders;
@@ -32,6 +36,16 @@ export class CartComponent {
     const orderFound = this.orders.indexOf(order);
     this.orders[orderFound].amount++;
     this.cartService.save()
+  }
+
+  payment(){
+    const user = this.authService.getUser()
+    if(!user){
+      this.router.navigateByUrl('login')
+    }else{
+      this.router.navigateByUrl('sites/payment')
+    }
+    
   }
 
   removeAmount(order : ProductOrder){

@@ -1,4 +1,4 @@
-<div *ngIf="menuType=='Cliente'; else empleadoTemplate">
+<div *ngIf="menuType=='Cliente'">
     <nav class="navMenu p-static" style="width:95%">
         <a class="d-inline me-3" [routerLink]="'/'">Inicio</a>
         <a class="d-inline me-3" [routerLink]="'/sites/products'">Nuestros Productos</a>
@@ -7,19 +7,31 @@
             <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
         </button>
         <div style="float:right">
+            <h3> Hola {{name}}</h3>
             <a class="d-inline" (click)="closeSession()">Cerrar Sesion</a>
         </div>
     </nav>
 </div>
 <app-cart  [hidden]="opened"></app-cart>
-<ng-template #empleadoTemplate>
+<div *ngIf="menuType=='Empleado'">
     <nav class="navMenu p-static" style="width:95%" >
         <a class="d-inline me-3" [routerLink]="'/'">Inicio</a>
         <a class="d-inline me-3" [routerLink]="'/sites/product-manager'">Gestion Productos</a>
         <a class="d-inline me-3" [routerLink]="'/sites/category-manager'">Gestion Categorias</a>
         <div class="d-inline" style="float:right">
+            <h3> Hola {{name}}</h3>
             <a class="d-inline" (click)="closeSession()">Cerrar Sesion</a>
         </div>
     </nav>
-</ng-template>
+</div>
+
+<div *ngIf="menuType=='Invitado'">
+    <nav class="navMenu p-static" style="width:95%">
+        <a class="d-inline me-3" [routerLink]="'/'">Inicio</a>
+        <a class="d-inline me-3" [routerLink]="'/sites/products'">Nuestros Productos</a>
+        <div style="float:right">
+            <a class="d-inline" [routerLink]="'/login'">Iniciar Sesion</a>
+        </div>
+    </nav>
+</div>
 

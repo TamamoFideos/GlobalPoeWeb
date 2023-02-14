@@ -4,7 +4,7 @@
             <div class="d-flex">
                 <div class="row" style="width: 100%">
                     <div class="col-4">
-                        <img src="{{'http://localhost/GlobalWebBack/images/'+order.product.image}}" height="80px">
+                        <img src="{{'http://localhost/Server/images/'+order.product.image}}" height="80px">
                     </div>
                     <div class="col-5">
                         <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div *ngIf="orders.length > 0" class="d-flex align-items-center justify-content-center">
-            <button class="f-button green" [routerLink]="'/sites/payment'">
+            <button class="f-button green"  (click)="payment()">
                 Pagar
             </button>
         </div>

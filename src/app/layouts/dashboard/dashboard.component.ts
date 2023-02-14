@@ -16,7 +16,12 @@ export class DashboardComponent implements OnInit {
   }
   ngOnInit() {
     const user= this.authService.getUser();
-    if(user?.role == 'Cliente' || !user){
+    if(!user){
+      
+      this.menuType = 'Invitado'
+      return;
+    }
+    if(user?.role == 'Cliente'){
       this.menuType= 'Cliente'
     }else{
       this.menuType= 'Empleado'

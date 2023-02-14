@@ -3,4 +3,5 @@ export default class User{
     id : string;
     password : string;
     role : string;
+    name : string
 }

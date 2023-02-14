@@ -17,7 +17,13 @@ export class ContainerComponent implements OnInit{
 
   ngOnInit() {
     const user= this.authService.getUser();
-    if(user?.role == 'Cliente' || !user){
+    console.log(user);
+    if(!user){
+      
+      this.menuType = 'Invitado'
+      return;
+    }
+    if(user?.role == 'Cliente'){
       this.menuType= 'Cliente'
     }else{
       this.menuType= 'Empleado'
