@@ -1,0 +1,43 @@
+<section class="ms-4 mx-4">
+    <!--for demo wrap-->
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="d-inline-flex">
+        <h1>Historial de Compras</h1>
+        <!-- SVG Sprites-->
+        <svg class="sprites">
+          <symbol id="select-arrow-down" viewbox="0 0 10 6">
+            <polyline points="1 1 5 5 9 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+    </div>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Total</th>
+            <th>Direccion de envio</th>
+            <th>Tarjeta</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{order.id}}</td>
+            <td>{{order.total}}</td>
+            <td>{{order.address}}</td>
+            <td>{{order.card}}</td>
+            <td>{{order.date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  
+  

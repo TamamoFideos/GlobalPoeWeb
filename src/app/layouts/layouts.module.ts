@@ -16,6 +16,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { CategoryCreationComponent } from './category-creation/category-creation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ListPurchaseComponent } from './list-purchase/list-purchase.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PaymentComponent } from './payment/payment.component';
     CategoryCreationComponent,
     DashboardComponent,
     PaymentComponent,
+    ListPurchaseComponent,
   ],
   imports: [
     CommonModule,

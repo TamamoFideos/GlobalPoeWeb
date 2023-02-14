@@ -7,6 +7,7 @@ import { ProductsCreationComponent } from './products-creation/products-creation
 import { AdminGuard } from '../guards/admin.guard';
 import { CategoryCreationComponent } from './category-creation/category-creation.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ListPurchaseComponent } from './list-purchase/list-purchase.component';
 
 const routes: Routes = [
   
@@ -16,6 +17,7 @@ const routes: Routes = [
     { path : 'products', component : ProductsComponent},
     { path : 'build', component : ComputerBuildComponent},
     { path : 'payment', component : PaymentComponent},
+    { path : 'history', component : ListPurchaseComponent},
     { 
       canActivate : [AdminGuard],
       path : 'product-manager', component : ProductsCreationComponent

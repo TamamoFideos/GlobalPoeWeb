@@ -20,6 +20,8 @@ export class BaseService<T> {
     
     return this.httpClient.get<{list : T[]}>(this.baseUrl+'/'+this.path+'/list'+((args !== '') ? '?' + args : args))
     .pipe(map((data ) => {
+      console.log(data);
+      
       return data.list;
     }))
   }
