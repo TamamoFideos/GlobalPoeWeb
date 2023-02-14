@@ -6,6 +6,7 @@ import { ComputerBuildComponent } from './computer-build/computer-build.componen
 import { ProductsCreationComponent } from './products-creation/products-creation.component';
 import { AdminGuard } from '../guards/admin.guard';
 import { CategoryCreationComponent } from './category-creation/category-creation.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   
@@ -14,6 +15,7 @@ const routes: Routes = [
   children : [
     { path : 'products', component : ProductsComponent},
     { path : 'build', component : ComputerBuildComponent},
+    { path : 'payment', component : PaymentComponent},
     { 
       canActivate : [AdminGuard],
       path : 'product-manager', component : ProductsCreationComponent

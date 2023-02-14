@@ -40,7 +40,7 @@
             </div>
         </div>
         <div *ngIf="orders.length > 0" class="d-flex align-items-center justify-content-center">
-            <button class="f-button green">
+            <button class="f-button green" [routerLink]="'/sites/payment'">
                 Pagar
             </button>
         </div>

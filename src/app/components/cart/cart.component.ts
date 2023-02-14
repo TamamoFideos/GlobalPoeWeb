@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import localeEs from '@angular/common/locales/es-MX';
 import Product from '../../model/product.model';
 import ProductOrder from '../../model/product-order.model';
 import { CartService } from '../../services/cart.service';
-import { formatCurrency } from '@angular/common';
+import { formatCurrency, registerLocaleData } from '@angular/common';
 import Order from '../../model/order.model copy';
 
 @Component({
@@ -18,6 +19,8 @@ export class CartComponent {
   ){
     this.cartService.retrieve()
     this.orders = cartService.orders;
+    registerLocaleData(localeEs, 'MXN');
+
   }
 
   formatCurr(value : number){
