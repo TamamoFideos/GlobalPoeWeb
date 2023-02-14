@@ -1,6 +1,6 @@
-export default interface User{
-    email : string,
-    id : string,
-    password : string,
-    role : string,
+export default class User{
+    email : string;
+    id : string;
+    password : string;
+    role : string;
 }

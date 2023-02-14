@@ -1,0 +1,18 @@
+.round-btn{
+    display:block;
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    background-color: #dd2319;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    border: 1px solid #dd2319;
+}
+.round-btn:hover{
+    color: #dd2319;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid white;
+
+}

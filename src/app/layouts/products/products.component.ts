@@ -6,6 +6,7 @@ import localeEs from '@angular/common/locales/es-MX';
 import { registerLocaleData } from '@angular/common';
 import Product from 'src/app/model/product.model';
 import Category from 'src/app/model/category.model';
+import { CartService } from '../../services/cart.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -18,7 +19,9 @@ export class ProductsComponent{
   public cartOpened : boolean = false;
   constructor(
     private productService : ProductsService,
-    private categoryService : CategoriesService){
+    private categoryService : CategoriesService,
+    private cartService : CartService
+    ){
     registerLocaleData(localeEs, 'MXN');
 
   }
@@ -45,5 +48,9 @@ export class ProductsComponent{
       this.products = data;
       
     })
+  }
+
+  addOrder(product : Product){
+    this.cartService.addProduct(product)
   }
 }

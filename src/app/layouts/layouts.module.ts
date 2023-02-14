@@ -15,6 +15,7 @@ import { ProductsCreationComponent } from './products-creation/products-creation
 import {MatDialogModule} from '@angular/material/dialog';
 import { CategoryCreationComponent } from './category-creation/category-creation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ProductsCreationComponent,
     CategoryCreationComponent,
     DashboardComponent,
+    PaymentComponent,
   ],
   imports: [
     CommonModule,

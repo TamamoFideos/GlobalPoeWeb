@@ -5,14 +5,14 @@
         <a class="d-inline me-3" [routerLink]="'/sites/build'">Arma tu computadora</a>
         <a class="d-inline me-3" [routerLink]="'sites/history'">Historial de Compras</a>
         <button style="float:right; margin-left : 2rem" class="round-btn" (click)="openCart()">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shop"></mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
         </button>
         <div style="float:right">
             <a class="d-inline" (click)="closeSession()">Cerrar Sesion</a>
         </div>
     </nav>
 </div>
-
+<app-cart  [hidden]="opened"></app-cart>
 <ng-template #empleadoTemplate>
     <nav class="navMenu p-static" style="width:95%" >
         <a class="d-inline me-3" [routerLink]="'/'">Inicio</a>

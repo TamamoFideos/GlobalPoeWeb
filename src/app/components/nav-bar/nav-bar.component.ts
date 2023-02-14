@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
   @Input('menuType') menuType : string;
-
+  public opened = false;
   constructor(
     private authService : AuthService,
     private router : Router
@@ -21,7 +21,8 @@ export class NavBarComponent {
     this.authService.logout()
   }
 
-  openCar(){
-    
+  openCart(){
+    this.opened = !this.opened;
+
   }
 }
