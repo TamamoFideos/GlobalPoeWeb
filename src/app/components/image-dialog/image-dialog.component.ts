@@ -8,7 +8,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class ImageDialogComponent {
   documentPath : string;
-  baseUrl = 'http://localhost/GlobalWebBack/images/'
+  baseUrl = 'http://10.0.0.12/GlobalWebBack/images/'
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: {url : string, localFile : File},
