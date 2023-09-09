@@ -18,7 +18,7 @@ export class AuthService {
 
 
   login(formData : any){
-    this.httpClient.post(this.baseUrl+"/login", formData).subscribe(data=> {
+    this.httpClient.post(this.baseUrl+"/login.php", formData).subscribe(data=> {
       this.user = data as User;
       this.router.navigateByUrl('/')
       localStorage.setItem('user', JSON.stringify(this.user))
@@ -31,7 +31,7 @@ export class AuthService {
     localStorage.removeItem('user')
   }
   createUser(formData : any){
-    return this.httpClient.post(this.baseUrl+"/post-user", formData);
+    return this.httpClient.post(this.baseUrl+"/post-user.php", formData);
   }
 
   getUser(){
