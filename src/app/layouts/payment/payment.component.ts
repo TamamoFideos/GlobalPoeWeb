@@ -49,11 +49,11 @@ export class PaymentComponent {
     this.purchaseService.post(value).subscribe(data=> {
       localStorage.removeItem('cart')
       this.cartService.orders = [];
-      //window.location.reload();
+      window.location.reload();
     }, err => {
       localStorage.removeItem('cart')
       this.cartService.orders = [];
-      //window.location.reload();
+      window.location.reload();
     })
 
   }
