@@ -6,6 +6,7 @@ import localeEs from '@angular/common/locales/es-MX';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { PurchaseService } from '../../services/purchase.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -21,7 +22,8 @@ export class PaymentComponent {
     private formBuilder : FormBuilder,
     private cartService : CartService,
     private authService : AuthService,
-    private purchaseService : PurchaseService
+    private purchaseService : PurchaseService,
+    private router : Router,
   ){
     this.cartService.retrieve()
     this.orders = cartService.orders;
@@ -49,11 +51,11 @@ export class PaymentComponent {
     this.purchaseService.post(value).subscribe(data=> {
       localStorage.removeItem('cart')
       this.cartService.orders = [];
-      window.location.reload();
+      this.router.navigateByUrl('sites/payment')
     }, err => {
       localStorage.removeItem('cart')
       this.cartService.orders = [];
-      window.location.reload();
+      this.router.navigateByUrl('sites/payment')
     })
 
   }
