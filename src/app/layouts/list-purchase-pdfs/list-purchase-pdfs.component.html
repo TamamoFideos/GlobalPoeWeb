@@ -26,7 +26,7 @@
         <tbody>
           <tr *ngFor="let order of files">
             <td><mat-icon mat-list-icon>insert_drive_file</mat-icon></td>
-            <td><a href="http://10.0.0.14/client_id_{{authService.getUser()?.id}}" target="_blank">{{order}}</a></td>
+            <td><a href="http://10.0.0.14/client_id_{{authService.getUser()?.id+'/'+order}}" target="_blank">{{order}}</a></td>
           </tr>
         </tbody>
       </table>
