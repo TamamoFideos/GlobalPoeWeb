@@ -8,6 +8,7 @@ import { AdminGuard } from '../guards/admin.guard';
 import { CategoryCreationComponent } from './category-creation/category-creation.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ListPurchaseComponent } from './list-purchase/list-purchase.component';
+import { ListPurchasePdfsComponent } from './list-purchase-pdfs/list-purchase-pdfs.component';
 
 const routes: Routes = [
   
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path : 'build', component : ComputerBuildComponent},
     { path : 'payment', component : PaymentComponent},
     { path : 'history', component : ListPurchaseComponent},
+    { path : 'pdf-history', component : ListPurchasePdfsComponent},
     { 
       canActivate : [AdminGuard],
       path : 'product-manager', component : ProductsCreationComponent

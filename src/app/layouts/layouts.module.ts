@@ -17,6 +17,7 @@ import { CategoryCreationComponent } from './category-creation/category-creation
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ListPurchaseComponent } from './list-purchase/list-purchase.component';
+import { ListPurchasePdfsComponent } from './list-purchase-pdfs/list-purchase-pdfs.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ListPurchaseComponent } from './list-purchase/list-purchase.component';
     DashboardComponent,
     PaymentComponent,
     ListPurchaseComponent,
+    ListPurchasePdfsComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,37 @@
+<section class="ms-4 mx-4">
+    <!--for demo wrap-->
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="d-inline-flex">
+        <h1>Historial de Recibos de combra</h1>
+        <!-- SVG Sprites-->
+        <svg class="sprites">
+          <symbol id="select-arrow-down" viewbox="0 0 10 6">
+            <polyline points="1 1 5 5 9 1"></polyline>
+          </symbol>
+        </svg>
+      </div>
+    </div>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>Icono</th>
+            <th>Archivo</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr *ngFor="let order of files">
+            <td><mat-icon mat-list-icon>insert_drive_file</mat-icon></td>
+            <td><a href="http://10.0.0.14/client_id_{{authService.getUser()?.id}}" target="_blank">{{order}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  
+  
