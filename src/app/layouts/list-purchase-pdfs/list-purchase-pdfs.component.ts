@@ -19,6 +19,8 @@ export class ListPurchasePdfsComponent {
   ngOnInit(): void {
     this.purchaseService.getPdfs("id="+this.authService.getUser()?.id).subscribe(data => {
       this.files = data;
+      console.log(this.files);
+      
     })
   }
 }
