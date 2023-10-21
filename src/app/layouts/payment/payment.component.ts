@@ -51,11 +51,11 @@ export class PaymentComponent {
     this.purchaseService.post(value).subscribe(data=> {
       localStorage.removeItem('cart')
       this.cartService.orders = [];
-      this.router.navigateByUrl('sites/payment')
+      this.router.navigateByUrl('sites/products')
     }, err => {
       localStorage.removeItem('cart')
       this.cartService.orders = [];
-      this.router.navigateByUrl('sites/payment')
+      this.router.navigateByUrl('sites/products')
     })
 
   }
