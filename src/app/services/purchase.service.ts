@@ -17,9 +17,7 @@ export class PurchaseService extends BaseService<Order> {
   public getPdfs(args = ''){
     return this.httpClient.get<{list : String[]}>('http://10.0.0.14'+'/webdav-server/orders'+".php"+((args !== '') ? '?' + args : args))
     .pipe(map((data ) => {
-      console.log(data);
-      
-      return data.list;
+      return data;
     }))
   }
 

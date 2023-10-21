@@ -9,7 +9,7 @@ import { PurchaseService } from 'src/app/services/purchase.service';
   ]
 })
 export class ListPurchasePdfsComponent {
-  public files : String[];
+  public files : any;
   constructor(
     private purchaseService : PurchaseService,
     public authService : AuthService,
@@ -19,7 +19,6 @@ export class ListPurchasePdfsComponent {
   ngOnInit(): void {
     this.purchaseService.getPdfs("id="+this.authService.getUser()?.id).subscribe(data => {
       this.files = data;
-      console.log(this.files);
       
     })
   }
