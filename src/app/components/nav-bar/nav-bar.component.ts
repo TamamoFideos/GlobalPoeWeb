@@ -11,6 +11,7 @@ export class NavBarComponent implements OnInit {
   @Input('menuType') menuType : string;
   public opened = false;
   public name : any;
+  public client_id : any;
   constructor(
     private authService : AuthService,
     private router : Router
@@ -19,7 +20,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
     this.name = this.authService.getUser()?.name;
-      
+    this.client_id = this.authService.getUser()?.id;
   }
 
   closeSession(){
